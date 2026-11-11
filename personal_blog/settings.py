@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-nol_g#t^jo($wphv&v@s*khrr-jwm@qcq+#jpbwkg^cty3hrr5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["dextrose.pythonanywhere.com"]
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -140,4 +140,4 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 # omorhienrhiendestiny1@gmail.com
-# destiny2026#
+# destiny2026
