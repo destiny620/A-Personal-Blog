@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %} Blog detail {% endblock %}
+{% load static %}
+{% comment %} {% load socialaccount %} {% endcomment %}
+
+
+
+
+    Codexio
+
+
+{% block content %}
+
+
+<div class="container w-75 my-4">
+  <h2 class="blog-post-title">{{posts.title}}</h2>
+  <br>
+ 
+  <div class="media">
+    {% if posts.author.profile.image %}
+    <img class="mr-3 rounded-circle" src="{{posts.author.profile.image.url}}" width="50px" height="50px"
+          alt="image">
+    {% endif %}
+    <div class="media-body">
+      <h5 class="mt-0"><a style="color: red;" href="/user_profile/{{posts.author.id}}/"> By {{posts.author}}
+                  {% if user.is_authenticated %}
+                  {% if user.id == posts.author.id %}
+                  <small><a href="{% url 'edit_blogpost' posts.slug %}" class="edit btn btn-warning">Edit Blog Post</a></small>
+                  {% endif %}
+                  {% endif %}
+                  
+            </a></h5>
+      {{posts.created_at}}
+</div>
+</div>
+<br>
+<img src="/media/{{posts.image}}" alt="" height="250px" width="500px">
+<br>
+<p>{{posts.content|safe}}.</p>
+<hr>
+
+                  <br>
+                 
+            </div>
+      </div>
+
+
+
+
+{% endblock %}

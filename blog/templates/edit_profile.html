@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %} Edit Profile {% endblock %}
+{% load static %}
+{% comment %} {% load socialaccount %} {% endcomment %}
+
+
+
+
+    Codexio
+
+
+{% block content %}
+
+<div class="jumbotron container row">
+    <div class="col-md-6">
+        <div class="card card-body">
+           <form action="" method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+                {{form.as_p}}
+                <br>
+             <input type="submit" name="submit">
+             </form>
+            </div>
+        </div>
+    </div>
+ 
+</div>
+
+<!-- <div class="container mt-3"></div>
+<form action="/edit_profile/" enctype="multipart/form-data" method="POST"> 
+    {% csrf_token %}
+    
+   {{ form.as_p }}
+    <button type="submit" class="btn btn-primary">Update</button>   
+</form>
+</div> -->
+{% endblock %}
+{% block js %}
+<script>
+    // {% if alert %}
+    // alert('Your Profile has been updated successfully.');
+    // document.location = '/profile/';
+    // {% endif %}
+</script>
+
+My name is Destiny Efe omorhienrhien. I am a Python/Django backend developer. i graduated from university of Benin, Benin City.
+
+{% endblock %}

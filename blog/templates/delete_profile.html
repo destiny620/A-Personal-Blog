@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %} Delete Profile {% endblock %}
+{% load static %}
+{% comment %} {% load socialaccount %} {% endcomment %}
+
+
+
+
+    Codexio
+
+
+{% block content %}
+
+<div class="container mt-5 mb-3">
+  <form method="POST">
+      {% csrf_token %}
+     <h5 class="card-title">Are you sure you want to delete this product?</h5>
+      <a href="/" class="btn btn-success">Cancel</a>
+      <button class="btn btn-danger">Delete</button>
+</div>
+
+{% endblock %}
