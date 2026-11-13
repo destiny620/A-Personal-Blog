@@ -12,7 +12,7 @@ class blogsView(ListView):
     model = BlogPost
     template_name = 'index.html'
     ordering = ['-created_at']
-    paginate_by = 1
+    paginate_by = 3
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
