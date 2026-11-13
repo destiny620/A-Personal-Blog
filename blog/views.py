@@ -24,7 +24,7 @@ def Blog_Detail(request, slug):
     return render(request, 'blog_detail.html', {'posts': posts})
 
 def blog(request):
-    posts = BlogPost.objects.all()
+    posts = BlogPost.objects.all().order_by('-created_at')
     return render(request, 'blog.html', {'posts': posts})
 
 def profile(request):
